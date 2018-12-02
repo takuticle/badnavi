@@ -11,6 +11,7 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    //"?"で変数にnilを入れることができるようになる
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
@@ -22,10 +23,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
+        
+        //SettingViewControllerをSplitViewControllerから取得する
         if let split = splitViewController {
             let controllers = split.viewControllers
+            
+            //"as!"は、強制的にダウンキャストを行い、成功することが分かっている場合に使用する
+            //"as?"は、強制的にダウンキャストを行い、ダウンキャスト成功するか分からない場合に使用
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        //!!!:初期表示時に詳細画面を表示するようにする
+        //今後、拡張する際に外すか要検討
+        self.performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {

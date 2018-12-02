@@ -12,7 +12,6 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-//  コメントを追加するテスト
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
@@ -21,7 +20,7 @@ class DetailViewController: UIViewController {
             }
         }
     }
-//　kasaiのプッシュを確認するテスト
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
