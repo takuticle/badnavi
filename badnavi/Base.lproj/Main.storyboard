@@ -34,20 +34,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DoublesCourt.png" translatesAutoresizingMaskIntoConstraints="NO" id="peC-ap-7DM">
-                                <rect key="frame" x="191" y="111" width="285" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoublesCourt.png" translatesAutoresizingMaskIntoConstraints="NO" id="peC-ap-7DM">
+                                <rect key="frame" x="146" y="106" width="375" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="peC-ap-7DM" secondAttribute="height" multiplier="75:43" id="BFd-Nw-uwK"/>
+                                    <constraint firstAttribute="width" secondItem="peC-ap-7DM" secondAttribute="height" multiplier="375:139" constant="-205.03597122302165" id="Qeu-sj-R4Q"/>
+                                    <constraint firstAttribute="width" secondItem="peC-ap-7DM" secondAttribute="height" multiplier="75:43" id="Xj9-9a-Yz8"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="各項目を設定してください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-GG-E67">
-                                <rect key="frame" x="119" y="43" width="429" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="各項目を設定してください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-GG-E67">
+                                <rect key="frame" x="0.0" y="42" width="667" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ume-8h-rd9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i6w-7p-OQd">
-                                <rect key="frame" x="244" y="73" width="178" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i6w-7p-OQd">
+                                <rect key="frame" x="248.5" y="73" width="170" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="vSi-t1-bFJ"/>
+                                </constraints>
                                 <segments>
                                     <segment title="シングルス"/>
                                     <segment title="ダブルス"/>
@@ -82,44 +90,46 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" placeholder="3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPZ-UN-J1P">
-                                <rect key="frame" x="307" y="260" width="52" height="30"/>
+                                <rect key="frame" x="307" y="226" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="E8p-n2-Nwu">
-                                <rect key="frame" x="377" y="261" width="94" height="29"/>
+                                <rect key="frame" x="377" y="227" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲーム数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dj-AS-LHX">
-                                <rect key="frame" x="191" y="265" width="108" height="21"/>
+                                <rect key="frame" x="191" y="231" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ポイント数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkw-9k-3kb">
-                                <rect key="frame" x="191" y="302" width="108" height="21"/>
+                                <rect key="frame" x="191" y="268" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="roundedRect" placeholder="21" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-Gf-CHV">
-                                <rect key="frame" x="307" y="299" width="52" height="30"/>
+                                <rect key="frame" x="307" y="265" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="SQm-49-LDN">
-                                <rect key="frame" x="377" y="298" width="94" height="29"/>
+                                <rect key="frame" x="377" y="264" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-Y2-qGN">
-                                <rect key="frame" x="347" y="335" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-Y2-qGN">
+                                <rect key="frame" x="293.5" y="335" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Hfx-n9-Xuw"/>
+                                </constraints>
                                 <state key="normal" title="次へ"/>
                                 <connections>
                                     <segue destination="ZOU-lj-j9U" kind="show" id="MBM-li-sI3"/>
@@ -149,6 +159,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6w3-GG-E67" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="3j8-fb-gdy"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="6w3-GG-E67" secondAttribute="trailing" id="K2l-vI-wkS"/>
+                            <constraint firstItem="8Ch-Y2-qGN" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="RYB-Tc-5Dq"/>
+                            <constraint firstItem="i6w-7p-OQd" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="Wph-b6-WaU"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="8Ch-Y2-qGN" secondAttribute="bottom" constant="10" id="ajI-vS-XGG"/>
+                            <constraint firstItem="6w3-GG-E67" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="iB6-8S-F34"/>
+                            <constraint firstItem="6w3-GG-E67" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="10" id="ogI-61-OZr"/>
+                            <constraint firstItem="peC-ap-7DM" firstAttribute="top" secondItem="i6w-7p-OQd" secondAttribute="bottom" constant="5" id="r74-0o-oeo"/>
+                            <constraint firstItem="peC-ap-7DM" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="xDB-8j-F3T"/>
+                            <constraint firstItem="i6w-7p-OQd" firstAttribute="top" secondItem="6w3-GG-E67" secondAttribute="bottom" constant="10" id="znq-pY-Gnt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
