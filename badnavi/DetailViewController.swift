@@ -27,13 +27,21 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        //モーダルを表示する
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "GameSettingNavi")
+        self.present(nextVC, animated: false, completion: nil)
+    }
+    
     var detailItem: Event? {
         didSet {
             // Update the view.
             configureView()
         }
     }
-
-
 }
 
