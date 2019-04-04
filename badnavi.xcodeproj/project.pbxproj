@@ -21,6 +21,10 @@
 		608E972E21A6E29200AD9482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608E972C21A6E29200AD9482 /* LaunchScreen.storyboard */; };
 		608E973921A6E29200AD9482 /* badnaviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E973821A6E29200AD9482 /* badnaviTests.swift */; };
 		608E974421A6E29200AD9482 /* badnaviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E974321A6E29200AD9482 /* badnaviUITests.swift */; };
+		F9D66FEC2255A34100A2AB46 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */; };
+		F9D66FED2255A34100A2AB46 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */; };
+		F9D66FEE2255A34100A2AB46 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */; };
+		F9D66FF02255A99800A2AB46 /* Cute_Duck.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FEF2255A99800A2AB46 /* Cute_Duck.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		608E973F21A6E29200AD9482 /* badnaviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = badnaviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		608E974321A6E29200AD9482 /* badnaviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badnaviUITests.swift; sourceTree = "<group>"; };
 		608E974521A6E29200AD9482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		F9D66FEF2255A99800A2AB46 /* Cute_Duck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cute_Duck.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,10 @@
 		516C32D121B3524300100731 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */,
+				F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */,
+				F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */,
+				F9D66FEF2255A99800A2AB46 /* Cute_Duck.png */,
 				516C32D321B353F900100731 /* DoublesCourt.png */,
 				516C32D221B353F900100731 /* SinglesCourt.png */,
 			);
@@ -222,13 +234,16 @@
 				TargetAttributes = {
 					608E971A21A6E28F00AD9482 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					608E973321A6E29200AD9482 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 608E971A21A6E28F00AD9482;
 					};
 					608E973E21A6E29200AD9482 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 608E971A21A6E28F00AD9482;
 					};
 				};
@@ -259,7 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				516C32D521B353F900100731 /* DoublesCourt.png in Resources */,
+				F9D66FED2255A34100A2AB46 /* iTunesArtwork@3x.png in Resources */,
+				F9D66FEE2255A34100A2AB46 /* iTunesArtwork@1x.png in Resources */,
+				F9D66FEC2255A34100A2AB46 /* iTunesArtwork@2x.png in Resources */,
 				608E972E21A6E29200AD9482 /* LaunchScreen.storyboard in Resources */,
+				F9D66FF02255A99800A2AB46 /* Cute_Duck.png in Resources */,
 				516C32D421B353F900100731 /* SinglesCourt.png in Resources */,
 				608E972B21A6E29200AD9482 /* Assets.xcassets in Resources */,
 				608E972921A6E28F00AD9482 /* Main.storyboard in Resources */,
@@ -477,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnavi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -495,7 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnavi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -515,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/badnavi.app/badnavi";
 			};
@@ -536,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/badnavi.app/badnavi";
 			};
@@ -556,7 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = badnavi;
 			};
@@ -576,7 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = badnavi;
 			};
