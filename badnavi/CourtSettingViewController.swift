@@ -16,7 +16,7 @@ enum ServeCourt:Int {
 let SERVE_SELECT = "●";
 let SERVE_UNSELECT = "○";
 
-class CourtSettingViewController: UIViewController {
+class CourtSettingViewController: UIViewController, UITextFieldDelegate {
     
     ///IBOutlet宣言
     //textfiled
@@ -42,18 +42,23 @@ class CourtSettingViewController: UIViewController {
     //サーブコート
     var isServeLeft = true;
     
-    
     /// 画面初期設定
     func configureView() {
         ///コート表示設定
         let isDoubles = (gameType == GameType.Doubles.rawValue)
         //名前
         nameLeftTopTf.isHidden = !isDoubles
+        nameLeftTopTf.delegate = self
         nameLeftMiddleTf.isHidden = isDoubles
+        nameLeftMiddleTf.delegate = self
         nameLeftBottomTf.isHidden = !isDoubles
+        nameLeftBottomTf.delegate = self
         nameRightTopTf.isHidden = !isDoubles
+        nameRightTopTf.delegate = self
         nameRightMiddleTf.isHidden = isDoubles
+        nameRightMiddleTf.delegate = self
         nameRightBottomTf.isHidden = !isDoubles
+        nameRightBottomTf.delegate = self
         //コート画像
         let courtImageName = (isDoubles ? "DoublesCourt.png" : "SinglesCourt.png")
         courtIv.image = UIImage(named: courtImageName)
@@ -87,5 +92,17 @@ class CourtSettingViewController: UIViewController {
     /// - Parameter sender: 部品情報
     @IBAction func tapReturnBtn(sender:AnyObject){
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // MARK: - Delgate
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        //選手名設定画面に遷移する
+        let nameInputViewController = self.storyboard?.instantiateViewController(withIdentifier: "NameInputViewController") as! NameInputViewController
+        nameInputViewController.selectedTf = textField
+        self.navigationController?.pushViewController(nameInputViewController, animated: true)
+        
+        // TextFieldの編集を開始させない
+        return false
     }
 }
