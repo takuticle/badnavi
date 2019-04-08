@@ -128,15 +128,6 @@ class GameViewController: UIViewController {
         return pointAction
     }
     
-    /// 戻るボタン押下
-    ///
-    /// - Parameter sender: ボタン情報
-    @IBAction func TapReturn(sender:AnyObject){
-        //一個前の値に戻す
-        
-        
-    }
-    
     /// ゲームリセットボタン押下
     ///
     /// - Parameter sender: ボタン情報

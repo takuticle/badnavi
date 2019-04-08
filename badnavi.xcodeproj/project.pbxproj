@@ -69,6 +69,8 @@
 		608E974521A6E29200AD9482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97B76BF225B23E1000D8787 /* NameInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputViewController.swift; sourceTree = "<group>"; };
 		F97B76C1225B28FD000D8787 /* NameInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputCell.swift; sourceTree = "<group>"; };
+		F97B76C3225B515A000D8787 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		F97B76C4225B515A000D8787 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
 		F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 608E971221A6E28F00AD9482;
 			productRefGroup = 608E971C21A6E28F00AD9482 /* Products */;
@@ -360,6 +363,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				608E972821A6E28F00AD9482 /* Base */,
+				F97B76C3225B515A000D8787 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -368,6 +372,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				608E972D21A6E29200AD9482 /* Base */,
+				F97B76C4225B515A000D8787 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -440,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

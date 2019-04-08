@@ -77,7 +77,26 @@ class CourtSettingViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Action
     
-    /// サーバ設定ボタン押下
+    /// コートチェンジボタン押下
+    ///
+    /// - Parameter sender: 部品情報
+    @IBAction func tapCourtChangeBtn(btn:UIButton){
+        
+        if gameType == GameType.Doubles.rawValue {
+            let beforeNameLeftTop = nameLeftTopTf.text
+            let beforeNameBottomTop = nameLeftBottomTf.text
+            nameLeftTopTf.text = nameRightTopTf.text
+            nameLeftBottomTf.text = nameRightBottomTf.text
+            nameRightTopTf.text = beforeNameLeftTop
+            nameRightBottomTf.text = beforeNameBottomTop
+        }else{
+            let beforeNameLeftMiddle = nameLeftMiddleTf.text
+            nameLeftMiddleTf.text = nameRightMiddleTf.text
+            nameRightMiddleTf.text = beforeNameLeftMiddle
+        }
+    }
+    
+    /// サーブ設定ボタン押下
     ///
     /// - Parameter sender: 部品情報
     @IBAction func tapServeBtn(btn:UIButton){
@@ -85,13 +104,6 @@ class CourtSettingViewController: UIViewController, UITextFieldDelegate {
         isServeLeft = (btn.tag == leftServeBtn.tag)
         leftServeBtn.setTitle((isServeLeft ? SERVE_SELECT:SERVE_UNSELECT), for:UIControl.State.normal)
         rightServeBtn.setTitle((!isServeLeft ? SERVE_SELECT:SERVE_UNSELECT), for:UIControl.State.normal)
-    }
-    
-    /// 戻るボタン押下
-    ///
-    /// - Parameter sender: 部品情報
-    @IBAction func tapReturnBtn(sender:AnyObject){
-        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - Delgate
