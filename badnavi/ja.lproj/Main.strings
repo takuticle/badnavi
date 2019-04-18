@@ -1,0 +1,126 @@
+
+/* Class = "UITextField"; placeholder = "A"; ObjectID = "3ux-yB-nnB"; */
+"3ux-yB-nnB.placeholder" = "A";
+
+/* Class = "UITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
+"7bK-jq-Zjz.title" = "Master";
+
+/* Class = "UIBarButtonItem"; title = "Return"; ObjectID = "9La-Ak-YHe"; */
+"9La-Ak-YHe.title" = "Return";
+
+/* Class = "UITextField"; placeholder = "B"; ObjectID = "ATF-sQ-4Mn"; */
+"ATF-sQ-4Mn.placeholder" = "B";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Arm-wq-HPj"; */
+"Arm-wq-HPj.text" = "Title";
+
+/* Class = "UILabel"; text = "↘"; ObjectID = "CfK-fI-4OT"; */
+"CfK-fI-4OT.text" = "↘";
+
+/* Class = "UILabel"; text = "Serve"; ObjectID = "Dgm-54-zXZ"; */
+"Dgm-54-zXZ.text" = "Serve";
+
+/* Class = "UILabel"; text = "マッチポイントです。"; ObjectID = "G3r-Kq-lue"; */
+"G3r-Kq-lue.text" = "マッチポイントです。";
+
+/* Class = "UITextField"; text = "3"; ObjectID = "GYg-zw-Ugi"; */
+"GYg-zw-Ugi.text" = "3";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
+"JEX-9P-axG.title" = "Detail";
+
+/* Class = "UILabel"; text = "Score"; ObjectID = "K41-0b-eJy"; */
+"K41-0b-eJy.text" = "Score";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Ke2-as-YBN"; */
+"Ke2-as-YBN.text" = "1";
+
+/* Class = "UINavigationItem"; title = "Game Setting"; ObjectID = "LcT-kF-all"; */
+"LcT-kF-all.title" = "Game Setting";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "Nbp-dG-lJH"; */
+"Nbp-dG-lJH.text" = "Type";
+
+/* Class = "UITextField"; placeholder = "A"; ObjectID = "Pug-SX-dog"; */
+"Pug-SX-dog.placeholder" = "A";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "QAj-Rt-TfD"; */
+"QAj-Rt-TfD.text" = "B";
+
+/* Class = "UIButton"; normalTitle = "●"; ObjectID = "R6M-Lm-NTX"; */
+"R6M-Lm-NTX.normalTitle" = "●";
+
+/* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
+"RMx-3f-FxP.title" = "Master";
+
+/* Class = "UIButton"; normalTitle = "○"; ObjectID = "SDf-G3-v0A"; */
+"SDf-G3-v0A.normalTitle" = "○";
+
+/* Class = "UILabel"; text = "Court "; ObjectID = "TaO-0Q-ZQW"; */
+"TaO-0Q-ZQW.text" = "Court ";
+
+/* Class = "UITextField"; placeholder = "C"; ObjectID = "Wpp-bf-vwb"; */
+"Wpp-bf-vwb.placeholder" = "C";
+
+/* Class = "UINavigationItem"; title = "Master"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "Master";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "azz-La-vkQ"; */
+"azz-La-vkQ.text" = "00:00";
+
+/* Class = "UIBarButtonItem"; title = "Game Start"; ObjectID = "e83-Ka-HK7"; */
+"e83-Ka-HK7.title" = "Game Start";
+
+/* Class = "UITextField"; placeholder = "D"; ObjectID = "g1h-qE-iKv"; */
+"g1h-qE-iKv.placeholder" = "D";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "g3R-Th-iRj"; */
+"g3R-Th-iRj.text" = "A";
+
+/* Class = "UIButton"; normalTitle = "20"; ObjectID = "iN1-rw-2jK"; */
+"iN1-rw-2jK.normalTitle" = "20";
+
+/* Class = "UILabel"; text = "Game"; ObjectID = "ipC-yC-XTv"; */
+"ipC-yC-XTv.text" = "Game";
+
+/* Class = "UITextField"; text = "21"; ObjectID = "iwk-TT-B9a"; */
+"iwk-TT-B9a.text" = "21";
+
+/* Class = "UITextField"; placeholder = "Please Input Name"; ObjectID = "jgt-X2-3Dp"; */
+"jgt-X2-3Dp.placeholder" = "Please Input Name";
+
+/* Class = "UIButton"; normalTitle = "20"; ObjectID = "jyQ-bN-f1o"; */
+"jyQ-bN-f1o.normalTitle" = "20";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "lWd-DK-3k0"; */
+"lWd-DK-3k0.text" = "1";
+
+/* Class = "UINavigationItem"; title = "Court Setting"; ObjectID = "lZQ-3E-LPN"; */
+"lZQ-3E-LPN.title" = "Court Setting";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "mLE-NO-eIN"; */
+"mLE-NO-eIN.title" = "Next";
+
+/* Class = "UIBarButtonItem"; title = "Game Reset"; ObjectID = "oDo-e5-a6h"; */
+"oDo-e5-a6h.title" = "Game Reset";
+
+/* Class = "UILabel"; text = "D"; ObjectID = "opC-oe-mmq"; */
+"opC-oe-mmq.text" = "D";
+
+/* Class = "UIButton"; normalTitle = "⇆"; ObjectID = "sOZ-py-JqZ"; */
+"sOZ-py-JqZ.normalTitle" = "⇆";
+
+/* Class = "UINavigationItem"; title = "Score Board"; ObjectID = "tYe-Ne-I9j"; */
+"tYe-Ne-I9j.title" = "Score Board";
+
+/* Class = "UILabel"; text = "C"; ObjectID = "vkT-0v-rVx"; */
+"vkT-0v-rVx.text" = "C";
+
+/* Class = "UITextField"; placeholder = "B"; ObjectID = "wnE-te-48O"; */
+"wnE-te-48O.placeholder" = "B";
+
+/* Class = "UISegmentedControl"; yzt-CX-ULx.segmentTitles[0] = "Sigles"; ObjectID = "yzt-CX-ULx"; */
+"yzt-CX-ULx.segmentTitles[0]" = "Sigles";
+
+/* Class = "UISegmentedControl"; yzt-CX-ULx.segmentTitles[1] = "Doubles"; ObjectID = "yzt-CX-ULx"; */
+"yzt-CX-ULx.segmentTitles[1]" = "Doubles";

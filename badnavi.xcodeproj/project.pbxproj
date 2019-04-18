@@ -24,6 +24,12 @@
 		608E973921A6E29200AD9482 /* badnaviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E973821A6E29200AD9482 /* badnaviTests.swift */; };
 		608E974421A6E29200AD9482 /* badnaviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E974321A6E29200AD9482 /* badnaviUITests.swift */; };
 		60F7D4B52268DB82001E977B /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7D4B42268DB82001E977B /* Match.swift */; };
+		F97B76C0225B23E1000D8787 /* NameInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97B76BF225B23E1000D8787 /* NameInputViewController.swift */; };
+		F97B76C2225B28FD000D8787 /* NameInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97B76C1225B28FD000D8787 /* NameInputCell.swift */; };
+		F9D66FEC2255A34100A2AB46 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */; };
+		F9D66FED2255A34100A2AB46 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */; };
+		F9D66FEE2255A34100A2AB46 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */; };
+		F9D66FF02255A99800A2AB46 /* Cute_Duck.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D66FEF2255A99800A2AB46 /* Cute_Duck.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,14 @@
 		608E974321A6E29200AD9482 /* badnaviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badnaviUITests.swift; sourceTree = "<group>"; };
 		608E974521A6E29200AD9482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60F7D4B42268DB82001E977B /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		F97B76BF225B23E1000D8787 /* NameInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputViewController.swift; sourceTree = "<group>"; };
+		F97B76C1225B28FD000D8787 /* NameInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputCell.swift; sourceTree = "<group>"; };
+		F97B76C3225B515A000D8787 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		F97B76C4225B515A000D8787 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		F9D66FEF2255A99800A2AB46 /* Cute_Duck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cute_Duck.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,10 @@
 		516C32D121B3524300100731 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F9D66FEB2255A34100A2AB46 /* iTunesArtwork@1x.png */,
+				F9D66FE92255A34000A2AB46 /* iTunesArtwork@2x.png */,
+				F9D66FEA2255A34000A2AB46 /* iTunesArtwork@3x.png */,
+				F9D66FEF2255A99800A2AB46 /* Cute_Duck.png */,
 				516C32D321B353F900100731 /* DoublesCourt.png */,
 				516C32D221B353F900100731 /* SinglesCourt.png */,
 			);
@@ -131,9 +149,11 @@
 				608E971E21A6E28F00AD9482 /* AppDelegate.swift */,
 				608E972321A6E28F00AD9482 /* MasterViewController.swift */,
 				608E972521A6E28F00AD9482 /* DetailViewController.swift */,
-				513B057D222C0BAA005F1D6F /* GameSettingViewController.swift */,
 				513B057E222C0BAA005F1D6F /* CourtSettingViewController.swift */,
+				513B057D222C0BAA005F1D6F /* GameSettingViewController.swift */,
 				516C32D621B3F73900100731 /* GameViewController.swift */,
+				F97B76BF225B23E1000D8787 /* NameInputViewController.swift */,
+				F97B76C1225B28FD000D8787 /* NameInputCell.swift */,
 				608E972721A6E28F00AD9482 /* Main.storyboard */,
 				608E972A21A6E29200AD9482 /* Assets.xcassets */,
 				608E972C21A6E29200AD9482 /* LaunchScreen.storyboard */,
@@ -260,6 +280,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 608E971221A6E28F00AD9482;
 			productRefGroup = 608E971C21A6E28F00AD9482 /* Products */;
@@ -279,7 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				516C32D521B353F900100731 /* DoublesCourt.png in Resources */,
+				F9D66FED2255A34100A2AB46 /* iTunesArtwork@3x.png in Resources */,
+				F9D66FEE2255A34100A2AB46 /* iTunesArtwork@1x.png in Resources */,
+				F9D66FEC2255A34100A2AB46 /* iTunesArtwork@2x.png in Resources */,
 				608E972E21A6E29200AD9482 /* LaunchScreen.storyboard in Resources */,
+				F9D66FF02255A99800A2AB46 /* Cute_Duck.png in Resources */,
 				516C32D421B353F900100731 /* SinglesCourt.png in Resources */,
 				608E972B21A6E29200AD9482 /* Assets.xcassets in Resources */,
 				608E972921A6E28F00AD9482 /* Main.storyboard in Resources */,
@@ -308,12 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				60427C072254F39D00810B1D /* Team.swift in Sources */,
+				F97B76C0225B23E1000D8787 /* NameInputViewController.swift in Sources */,
 				516C32D721B3F73900100731 /* GameViewController.swift in Sources */,
 				513B0580222C0BAB005F1D6F /* CourtSettingViewController.swift in Sources */,
 				60F7D4B52268DB82001E977B /* Match.swift in Sources */,
 				608E971F21A6E28F00AD9482 /* AppDelegate.swift in Sources */,
 				608E972221A6E28F00AD9482 /* badnavi.xcdatamodeld in Sources */,
 				60427C052254D29700810B1D /* Player.swift in Sources */,
+				F97B76C2225B28FD000D8787 /* NameInputCell.swift in Sources */,
 				513B057F222C0BAB005F1D6F /* GameSettingViewController.swift in Sources */,
 				608E972421A6E28F00AD9482 /* MasterViewController.swift in Sources */,
 				608E972621A6E28F00AD9482 /* DetailViewController.swift in Sources */,
@@ -356,6 +383,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				608E972821A6E28F00AD9482 /* Base */,
+				F97B76C3225B515A000D8787 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -364,6 +392,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				608E972D21A6E29200AD9482 /* Base */,
+				F97B76C4225B515A000D8787 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -375,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -436,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
