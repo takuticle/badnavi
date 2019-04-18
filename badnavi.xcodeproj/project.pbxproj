@@ -12,6 +12,8 @@
 		516C32D421B353F900100731 /* SinglesCourt.png in Resources */ = {isa = PBXBuildFile; fileRef = 516C32D221B353F900100731 /* SinglesCourt.png */; };
 		516C32D521B353F900100731 /* DoublesCourt.png in Resources */ = {isa = PBXBuildFile; fileRef = 516C32D321B353F900100731 /* DoublesCourt.png */; };
 		516C32D721B3F73900100731 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516C32D621B3F73900100731 /* GameViewController.swift */; };
+		60427C052254D29700810B1D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60427C042254D29700810B1D /* Player.swift */; };
+		60427C072254F39D00810B1D /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60427C062254F39C00810B1D /* Team.swift */; };
 		608E971F21A6E28F00AD9482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E971E21A6E28F00AD9482 /* AppDelegate.swift */; };
 		608E972221A6E28F00AD9482 /* badnavi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 608E972021A6E28F00AD9482 /* badnavi.xcdatamodeld */; };
 		608E972421A6E28F00AD9482 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E972321A6E28F00AD9482 /* MasterViewController.swift */; };
@@ -21,6 +23,7 @@
 		608E972E21A6E29200AD9482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608E972C21A6E29200AD9482 /* LaunchScreen.storyboard */; };
 		608E973921A6E29200AD9482 /* badnaviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E973821A6E29200AD9482 /* badnaviTests.swift */; };
 		608E974421A6E29200AD9482 /* badnaviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E974321A6E29200AD9482 /* badnaviUITests.swift */; };
+		60F7D4B52268DB82001E977B /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7D4B42268DB82001E977B /* Match.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 		516C32D221B353F900100731 /* SinglesCourt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SinglesCourt.png; sourceTree = "<group>"; };
 		516C32D321B353F900100731 /* DoublesCourt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoublesCourt.png; sourceTree = "<group>"; };
 		516C32D621B3F73900100731 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		60427C042254D29700810B1D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		60427C062254F39C00810B1D /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		608E971B21A6E28F00AD9482 /* badnavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = badnavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608E971E21A6E28F00AD9482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608E972121A6E28F00AD9482 /* badnavi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = badnavi.xcdatamodel; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		608E973F21A6E29200AD9482 /* badnaviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = badnaviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		608E974321A6E29200AD9482 /* badnaviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badnaviUITests.swift; sourceTree = "<group>"; };
 		608E974521A6E29200AD9482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60F7D4B42268DB82001E977B /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		608E971D21A6E28F00AD9482 /* badnavi */ = {
 			isa = PBXGroup;
 			children = (
+				609EF425224E18F200636E72 /* Models */,
 				608E971E21A6E28F00AD9482 /* AppDelegate.swift */,
 				608E972321A6E28F00AD9482 /* MasterViewController.swift */,
 				608E972521A6E28F00AD9482 /* DetailViewController.swift */,
@@ -152,6 +159,16 @@
 				608E974521A6E29200AD9482 /* Info.plist */,
 			);
 			path = badnaviUITests;
+			sourceTree = "<group>";
+		};
+		609EF425224E18F200636E72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60427C042254D29700810B1D /* Player.swift */,
+				60427C062254F39C00810B1D /* Team.swift */,
+				60F7D4B42268DB82001E977B /* Match.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,13 +239,16 @@
 				TargetAttributes = {
 					608E971A21A6E28F00AD9482 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					608E973321A6E29200AD9482 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 608E971A21A6E28F00AD9482;
 					};
 					608E973E21A6E29200AD9482 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 608E971A21A6E28F00AD9482;
 					};
 				};
@@ -287,10 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60427C072254F39D00810B1D /* Team.swift in Sources */,
 				516C32D721B3F73900100731 /* GameViewController.swift in Sources */,
 				513B0580222C0BAB005F1D6F /* CourtSettingViewController.swift in Sources */,
+				60F7D4B52268DB82001E977B /* Match.swift in Sources */,
 				608E971F21A6E28F00AD9482 /* AppDelegate.swift in Sources */,
 				608E972221A6E28F00AD9482 /* badnavi.xcdatamodeld in Sources */,
+				60427C052254D29700810B1D /* Player.swift in Sources */,
 				513B057F222C0BAB005F1D6F /* GameSettingViewController.swift in Sources */,
 				608E972421A6E28F00AD9482 /* MasterViewController.swift in Sources */,
 				608E972621A6E28F00AD9482 /* DetailViewController.swift in Sources */,
@@ -477,7 +500,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnavi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -495,7 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnavi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -515,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/badnavi.app/badnavi";
 			};
@@ -536,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/badnavi.app/badnavi";
 			};
@@ -556,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = badnavi;
 			};
@@ -576,7 +599,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuticle.badnaviUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = badnavi;
 			};
