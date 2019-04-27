@@ -8,12 +8,6 @@
 
 import Foundation
 
-// 試合開始時に左コートか右コートか
-enum Court {
-    case leftCourt
-    case rightCourt
-}
-
 class Team {
     var name : String           // チーム名
     var player1 : Player        // プレイヤ情報
