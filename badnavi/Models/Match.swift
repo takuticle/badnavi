@@ -12,15 +12,15 @@ let rarryState_serviceOver = 1
 
 // 試合の状態
 enum MatchState {
-    case before         // 試合開始前
-    case during         // 試合中
-    case duringGameP    // 試合中（ゲームポイント）
-    case duringMatchP   // 試合中（マッチポイント）
-    case over           // 試合終了（過去ログ）
-    case suspend        // 試合中断中（アプリを最小化したとか）
-    case interval_11    // 休憩中（11点に達したとき）
-    case interval_CC    // 休憩中（チェンジコート）
-    case interval_etc   // 休憩中（その他）
+    case Before         // 試合開始前
+    case During         // 試合中
+    case DuringGameP    // 試合中（ゲームポイント）
+    case DuringMatchP   // 試合中（マッチポイント）
+    case Over           // 試合終了（過去ログ）
+    case Suspend        // 試合中断中（アプリを最小化したとか）
+    case Interval_11    // 休憩中（11点に達したとき）
+    case Interval_CC    // 休憩中（チェンジコート）
+    case Interval_etc   // 休憩中（その他）
 }
 
 // コート上の位地
@@ -36,7 +36,7 @@ class Match {
     var matchName:String = ""           // 試合名
     private var matchStartTime:Date?    // 試合開始日時（試合ナビ画面に移った時間）
     private var matchEndTime:Date?      // 試合終了日時（マッチポイントが終わった時間）
-    var matchState:MatchState = MatchState.before   // 今の試合の状態
+    var matchState:MatchState = MatchState.Before   // 今の試合の状態
     
     private var teamL:Team              // 左チーム
     private var teamR:Team              // 右チーム
@@ -47,8 +47,9 @@ class Match {
     private var basePoints:Int8 = 0     // ゲーム開始時のポイント数。デフォは0。
     
     // ポイント取得履歴の配列を入れる配列。
-    private var pointHistories:NSMutableArray?
-    private var gameHistory:NSMutableArray?                 // ゲーム勝利履歴を入れる配列。
+    private var pointsHistory:Array<Bool>?              // 今のポイント履歴配列
+    private var pointsHistories:Array<Array<Bool>>      // 過去のポイント履歴配列の配列
+    private var gameHistory:Array<Bool>                 // ゲーム勝利履歴を入れる配列。
     
     private var umpire:Player?  // 主審（将来の拡張用）
     private var svJudge:Player?         // サービスジャッジ（将来の拡張用）
@@ -68,28 +69,10 @@ class Match {
     private var staff3:Player?
     private var staff4:Player?
     
-    // 左チームの点数
-    var pointsOfLeft : Int8 {
-        return 0        // コンパイルエラー抑止の仮return
-    }
-    // 右チームの点数
-    var pointsOfRight : Int8 {
-        return 0        // コンパイルエラー抑止の仮return
-    }
-    
-    // 左チームのゲーム数
-    var gameOfLeft : Int8 {
-        return 0        // コンパイルエラー抑止の仮return
-    }
-    
-    // 右チームのゲーム数
-    var gameOfRight : Int8 {
-        return 0        // コンパイルエラー抑止の仮return
-    }
-    
     // 初期化
     init(tname:String,       mname:String,      tL:Team,    tR:Team,
          firstSver:Player,   firstRcvr:Player,  gamesOfMatch:Int8, basePoints:Int8){
+        debugPrint("■初期化処理を実行")
         self.tournamentName = tname
         self.matchName = mname
         self.teamL = tL
@@ -98,6 +81,10 @@ class Match {
         self.firstRcvr = firstRcvr
         self.gamesOfMatch = gamesOfMatch
         self.basePoints = basePoints
+        
+        // 値の初期化
+        self.gameHistory = Array.init()
+        self.pointsHistories = Array.init()
     }
     
     // 初期化（ゲーム数、ポイント数を指定）
@@ -108,28 +95,77 @@ class Match {
                   gamesOfMatch:3, basePoints:0)
     }
     
-    // 左チームがポイント獲得
-    func rallyWonByLeft() {
-        
+    ///////////////////////////////
+    // 内部処理
+    ///////////////////////////////
+
+    
+    ///////////////////////////////
+    // ここから情報の参照メソッド
+    ///////////////////////////////
+    
+    // 左チームの点数
+    var pointsOfLeft : Int8 {
+        debugPrint("■左チームのポイント数を取得")
+        let pointsHist:Array = self.pointsHistories[self.gameHistory.count+1]
+        return Int8(pointsHist.filter{$0 == true}.count)
     }
-    // 右チームがポイント獲得
-    func rallyWonByRight() {
-        
+    // 右チームの点数
+    var pointsOfRight : Int8 {
+        debugPrint("■右チームのポイント数を取得")
+        let pointsHist:Array = self.pointsHistories[self.gameHistory.count+1]
+        return Int8(pointsHist.filter{$0 == false}.count)    }
+    
+    // 左チームのゲーム数
+    var gamesOfLeft : Int8 {
+        debugPrint("■左チームのゲーム数を取得")
+        return Int8(self.gameHistory.filter{$0 == true}.count)
     }
     
-    // 状態を一つもどす処理
-    func rollback(){
-        
-    }
-    
-    // ゲーム開始（またはインターバル終了）
-    func playGame(){
-        
+    // 右チームのゲーム数
+    var gamesOfRight : Int8 {
+        debugPrint("■右チームのゲーム数を取得")
+        return Int8(self.gameHistory.filter{$0 == false}.count)
     }
     
     // 位置からのプレイヤー情報取得
     func getPlayer(posision:posOfCourt) -> (player:Player, isServicer:Bool) {
+        debugPrint("■コート内位置からのプレイヤー情報の取得")
         return (self.teamL.player1, true)        // コンパイルエラー抑止の仮return
     }
-
+    
+    // 試合のステータスを返す
+    var getMatchStatus : MatchState {
+        debugPrint("■いまの試合の状態を取得")
+        return MatchState.During                // コンパイルエラー抑止の仮return
+    }
+    
+    
+    ///////////////////////////////
+    // ここからイベント発生時のメソッド
+    ///////////////////////////////
+    
+    // 左チームがポイント獲得した
+    func rallyWonByLeft() {
+        debugPrint("■左のチームが得点した")
+        self.pointsHistory?.append(true)
+    }
+    // 右チームがポイント獲得した
+    func rallyWonByRight() {
+        debugPrint("■右のチームが得点した")
+        self.pointsHistory?.append(false)
+    }
+    
+    // 状態を一つもどす
+    func rollback(){
+        debugPrint("■ポイントを一つ戻した")
+    }
+    
+    // ゲーム開始（またはインターバル終了）
+    func playGame(){
+        debugPrint("■試合が開始された")
+        // ポイント履歴を作成
+        self.pointsHistories.append((self.pointsHistory ?? nil)!)
+        self.pointsHistory = Array.init()
+    }
 }
